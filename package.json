@@ -1,6 +1,10 @@
 {
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "nodemon": "^2.0.16"
+  "name": "raw-node-api-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=staging nodemon index",
+    "production": "NODE_ENV=production nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
