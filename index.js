@@ -8,10 +8,10 @@ const data = require('./lib/data');
 
 const app = {};
 
-data.read('test', 'newfile',  (err,result) =>{
-    console.log(err,result);
+data.delete('test', 'newfile',  (err) =>{
+    console.log(err);
 });
-
+ 
 
 
 app.createServer = () => {
