@@ -8,9 +8,9 @@ const data = require('./lib/data');
 
 const app = {};
 
-data.delete('test', 'newfile',  (err) =>{
-    console.log(err);
-});
+// data.delete('test', 'newfile',  (err) =>{
+//     console.log(err);
+// });
  
 
 
