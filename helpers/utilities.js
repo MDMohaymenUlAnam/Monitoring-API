@@ -3,7 +3,7 @@ const crypto = require('crypto');
 const utilities = {};
 const environments = require('./environments');
 
-// parse JSON string to object
+// // parse JSON string to object
 
 utilities.parseJSON = (jsonString) => {
     let output;
@@ -17,7 +17,7 @@ utilities.parseJSON = (jsonString) => {
     return output;
 };
 
-// hash string
+// // hash string
 utilities.hash = (str) => {
     if (typeof(str) === 'string' && str.length > 0) {
         console.log(environments, process.env.NODE_ENV);
