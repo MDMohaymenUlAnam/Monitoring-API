@@ -1,30 +1,26 @@
-const http = require('http');
+// project initial file to start the server and background
 
+const server = require('./lib/server');
+const workers = require('./lib/worker');
 
-const {handleReqRes} = require('./helpers/handleReqRes');
-const environment = require('./helpers/environments');
-const data = require('./lib/data');
-const { sendTwilioSms } = require('./helpers/notifications');
 
 
 const app = {};
 
 
-
-// // configuration
-// app.config = {
-//     port: 3000,
-// };
  
 
 
-app.createServer = () => {
-    const server = http.createServer(app.handleReqRes);
-    server.listen(environment.port, () => {
-        console.log(`listening to port ${environment.port}`);
-    });
+app.init = () =>{
+    // start the server
+    server.init();
+
+
+    // start the worker
+    workers.init();
+
 };
 
-app.handleReqRes = handleReqRes;
+app.init();
 
-app.createServer(); 
+module.exports = app;
